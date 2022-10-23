@@ -19,7 +19,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var gbpRateLabel: UILabel!
     @IBOutlet weak var eurRateLabel: UILabel!
     
-    @IBOutlet var pageTitleStackView: UIStackView!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
@@ -53,7 +52,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationItem.titleView = self.pageTitleStackView;
         thaiDateFormater.locale = Locale(identifier: "th-TH");
         thaiDateFormater.dateStyle = .medium
         thaiDateFormater.timeStyle = .medium
