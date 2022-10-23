@@ -13,7 +13,7 @@
         <!--Bitcoin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Bitcoin" id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoins" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BitcoinHome" title="Bitcoin" id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@ rate after</string>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="coT-Cx-Djd" firstAttribute="leading" secondItem="bwX-bX-O2L" secondAttribute="leading" id="5qJ-Ae-4dh"/>
                                                 <constraint firstAttribute="bottom" secondItem="coT-Cx-Djd" secondAttribute="bottom" id="8Ni-hr-mab"/>

@@ -14,6 +14,11 @@ enum CurrencyType: String {
     case eur = "€"
 }
 
+enum BTCURLRequestCustomError: Error {
+    case noDataReceived
+    case invalidURL
+}
+
 class ViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var usdRateLabel: UILabel!
     @IBOutlet weak var gbpRateLabel: UILabel!
@@ -26,14 +31,18 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var calculateExchangeLabel: UILabel!
     
     @IBOutlet weak var countDownProgressView: OProgressView!
+    
     var currencyType2Calculate = CurrencyType.usd
     let currencyTypes = ["USD","GBP","EUR"]
+    
     var thaiDateFormater = DateFormatter()
     var dateFormater = ISO8601DateFormatter()
+    
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     lazy var persistentContainer: NSPersistentContainer? = {
         appDelegate?.persistentContainer
     }()
+    //A tap gesture to dimiss keyboard when user tap on screen
     lazy var resignFirstResponderGesture: UITapGestureRecognizer = {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tapRecognized(gesture:)))
         gesture.cancelsTouchesInView = false
@@ -42,8 +51,12 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }()
     var updatedRate: Minute?
     var countdownTimer: Timer?
+    //Count down every 1 minute to update the data
     var secondsPast = 0
     var timeIsPaused = false
+    
+    let apiURL = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json")
+    var urlSession: BTCURLSessionMockProtocol = URLSession.shared
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -129,10 +142,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     func request(completion: @escaping (Result<Minute?, Error>) -> Void) {
-        activityIndicatorView.startAnimating()
-        activityIndicatorView.isHidden = false
-        guard let url = URL(string: "https://api.coindesk.com/v1/bpi/currentprice.json") else {
-            completion(.success(nil))
+        activityIndicatorView?.startAnimating()
+        activityIndicatorView?.isHidden = false
+        
+        guard let url = apiURL else {
+            completion(.failure(BTCURLRequestCustomError.invalidURL))
             return;
         }
         
@@ -140,16 +154,19 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             pauseTimer()
         }
         
-        let task = URLSession.shared.dataTask(with: url) { [weak weakself = self] (data, response, error) in
+        let task = urlSession.dataTask(with: url) { [weak self] (data, response, error) in
             guard error == nil else {
                 completion(.failure(error!))
                 return
             }
             if data == nil {
-                completion(.success(nil))
+                completion(.failure(BTCURLRequestCustomError.noDataReceived))
             } else {
-                let minute = weakself?.exchangeRateFromJson(fromData: data!)
-                completion(.success(minute))
+                DispatchQueue.main.async { [weak wself = self] in
+                    let minute = wself?.exchangeRateFromJson(fromData: data!)
+                    wself?.updatedRate = minute
+                    completion(.success(minute))
+                }
             }
         }
         task.resume()

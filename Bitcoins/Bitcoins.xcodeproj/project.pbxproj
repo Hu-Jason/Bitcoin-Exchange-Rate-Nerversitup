@@ -13,6 +13,9 @@
 		235090892902D57300D809A2 /* RateHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235090882902D57300D809A2 /* RateHistoryTableViewController.swift */; };
 		235F44812903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F44802903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift */; };
 		235F44832903C1E300A9A5F2 /* BTCRecordSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F44822903C1E300A9A5F2 /* BTCRecordSortViewController.swift */; };
+		236851BA2905726A00D70148 /* BitcoinsFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236851B92905726A00D70148 /* BitcoinsFakeTests.swift */; };
+		236851BE2905795100D70148 /* BTCURLSessionMockTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236851BD2905795100D70148 /* BTCURLSessionMockTest.swift */; };
+		236851C029058AEE00D70148 /* BTCNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236851BF29058AEE00D70148 /* BTCNetworkMonitor.swift */; };
 		238F37C029005CB900AFC008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F37BF29005CB900AFC008 /* AppDelegate.swift */; };
 		238F37C229005CB900AFC008 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F37C129005CB900AFC008 /* SceneDelegate.swift */; };
 		238F37C429005CB900AFC008 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F37C329005CB900AFC008 /* ViewController.swift */; };
@@ -49,6 +52,9 @@
 		235090882902D57300D809A2 /* RateHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateHistoryTableViewController.swift; sourceTree = "<group>"; };
 		235F44802903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCPopDismissAnimationController.swift; sourceTree = "<group>"; };
 		235F44822903C1E300A9A5F2 /* BTCRecordSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCRecordSortViewController.swift; sourceTree = "<group>"; };
+		236851B92905726A00D70148 /* BitcoinsFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinsFakeTests.swift; sourceTree = "<group>"; };
+		236851BD2905795100D70148 /* BTCURLSessionMockTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCURLSessionMockTest.swift; sourceTree = "<group>"; };
+		236851BF29058AEE00D70148 /* BTCNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCNetworkMonitor.swift; sourceTree = "<group>"; };
 		238F37BC29005CB900AFC008 /* Bitcoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitcoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238F37BF29005CB900AFC008 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238F37C129005CB900AFC008 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 				2350905D29026BEC00D809A2 /* OProgressView.swift */,
 				235090862902D1BB00D809A2 /* HistoryRateTableViewCell.swift */,
 				238F37C329005CB900AFC008 /* ViewController.swift */,
+				236851BD2905795100D70148 /* BTCURLSessionMockTest.swift */,
+				236851BF29058AEE00D70148 /* BTCNetworkMonitor.swift */,
 				235090882902D57300D809A2 /* RateHistoryTableViewController.swift */,
 				235F44822903C1E300A9A5F2 /* BTCRecordSortViewController.swift */,
 				234AB50A290394200071EFCB /* BTCPresentationController.swift */,
@@ -134,6 +142,7 @@
 		238F37D829005CBB00AFC008 /* BitcoinsTests */ = {
 			isa = PBXGroup;
 			children = (
+				236851B92905726A00D70148 /* BitcoinsFakeTests.swift */,
 				238F37D929005CBB00AFC008 /* BitcoinsTests.swift */,
 			);
 			path = BitcoinsTests;
@@ -284,10 +293,12 @@
 				238F37C029005CB900AFC008 /* AppDelegate.swift in Sources */,
 				235F44812903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift in Sources */,
 				234AB50B290394200071EFCB /* BTCPresentationController.swift in Sources */,
+				236851C029058AEE00D70148 /* BTCNetworkMonitor.swift in Sources */,
 				2350905E29026BEC00D809A2 /* OProgressView.swift in Sources */,
 				235090872902D1BB00D809A2 /* HistoryRateTableViewCell.swift in Sources */,
 				235090892902D57300D809A2 /* RateHistoryTableViewController.swift in Sources */,
 				235F44832903C1E300A9A5F2 /* BTCRecordSortViewController.swift in Sources */,
+				236851BE2905795100D70148 /* BTCURLSessionMockTest.swift in Sources */,
 				238F37C229005CB900AFC008 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				238F37DA29005CBB00AFC008 /* BitcoinsTests.swift in Sources */,
+				236851BA2905726A00D70148 /* BitcoinsFakeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
