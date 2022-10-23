@@ -12,6 +12,9 @@ This is an application for Neversitup Co., Ltd's Mobile Developer Testing with t
   · price GBP
   · price EUR
 4. There is Input field for choosing 3 rate currency following on a. Then able to filling currency rate exchange to BTC
+ 
+![IMG_A85E44B06882-1](https://user-images.githubusercontent.com/52391655/197408373-cfefa662-2726-4ca8-b11f-523839bc2eee.jpeg)
+
 
 Additional
 1. writing Unit test
