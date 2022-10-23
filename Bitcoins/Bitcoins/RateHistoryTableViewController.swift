@@ -47,11 +47,6 @@ class RateHistoryTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.rightBarButtonItems = [self.editButtonItem,sortBarButtonItem]
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        appDelegate?.saveContext()
-    }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
