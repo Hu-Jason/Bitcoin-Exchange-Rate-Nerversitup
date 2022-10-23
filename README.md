@@ -15,7 +15,7 @@ This is an application for Neversitup Co., Ltd's Mobile Developer Testing with t
  
 ![IMG_A85E44B06882-1](https://user-images.githubusercontent.com/52391655/197408373-cfefa662-2726-4ca8-b11f-523839bc2eee.jpeg)
 
-![IMG_F506ABB5857E-1](https://user-images.githubusercontent.com/52391655/197408513-587b6f65-8639-4e58-901d-b59d0e590710.jpeg)
+![IMG_23805CA710ED-1](https://user-images.githubusercontent.com/52391655/197408675-db311b82-5961-4770-b3ba-e1c5cfd3a074.jpeg)
 
 ![IMG_9041EA39ADBE-1](https://user-images.githubusercontent.com/52391655/197408527-c6140041-6d2e-4da0-9401-0f7581cb5a85.jpeg)
 
