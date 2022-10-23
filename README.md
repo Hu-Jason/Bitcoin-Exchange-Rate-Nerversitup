@@ -14,6 +14,7 @@ This is an application for Neversitup Co., Ltd's Mobile Developer Testing with t
 4. There is Input field for choosing 3 rate currency following on a. Then able to filling currency rate exchange to BTC
 
 Additional
-1. generate program of Fibonacci’s numbers (0, 1, 1, 2, 3, 5, 8, 13, …)
-2. generate program of prime numbers (2, 3, 5, 7, 11, 13, 17, 19, …)
-3. code to filter an array from an array of two numbers, leaving only the members of the first array left in the second array, without using existing functions such as map, filter, contain, etc.
+1. writing Unit test
+2. generate program of Fibonacci’s numbers (0, 1, 1, 2, 3, 5, 8, 13, …)
+3. generate program of prime numbers (2, 3, 5, 7, 11, 13, 17, 19, …)
+4. code to filter an array from an array of two numbers, leaving only the members of the first array left in the second array, without using existing functions such as map, filter, contain, etc.
