@@ -13,6 +13,8 @@ func fib(_ n: Int) -> Int {
 }
 
 fib(6) //will returns 8
+//Time complexity O(n!)
+//Space complexity O(n)
 
 
 //2 filter prime numbers (2, 3, 5, 7, 11, 13, 17, 19, …) from range 0..<n
@@ -26,10 +28,11 @@ func primes(n: Int) -> [Int] {
         }
     }
     return numbers.filter{ $0 > 0 }
-
 }
 
 primes(n: 20) //will return [2, 3, 5, 7, 11, 13, 17, 19]
+//Time complexity O(n^2)
+//Space complexity O(n)
 
 
 //3  filter an array from an array of two numbers, leaving only the members of the first array left in the second array, without using existing functions such as map, filter, contain, etc
@@ -49,7 +52,14 @@ func filter<T: Equatable>(a: inout [T], with b: inout [T]) {
         }
     }
 }
+
 var a = [1,2,3,4,5,6]
 var b = [2,4,6]
 filter(a: &a, with: &b)
-print(a) //will return [2, 4, 6]
+print(a) //a will become [2, 4, 6]
+var c = [2,6,1,5,2,3,4,5,6,7,9,11]
+var d = [2,4,6]
+filter(a: &c, with: &d)
+print(c) //c will become [2, 6, 2, 4, 6]
+//Time complexity O(n^2)
+//Space complexity O(n)
