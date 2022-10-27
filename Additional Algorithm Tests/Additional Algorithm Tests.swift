@@ -8,12 +8,23 @@
 import Foundation
 
 //1 return the an element in Fibonacci’s numbers (0, 1, 1, 2, 3, 5, 8, 13, …) at n position
-func fib(_ n: Int) -> Int {
-    return n < 2 ? n : (fib(n-1) + fib(n-2))
+// Use recursion
+func fib(first: Int, second: Int, at n: Int) -> Int {
+    if n <= 0 {
+        return 0
+    } else if n < 3 {
+        return 1
+    } else if n == 3 {
+        return first + second
+    } else {
+        return fib(first: second, second: first + second, at: n - 1)
+    }
 }
 
-fib(6) //will returns 8
-//Time complexity O(n!)
+fib(first: 1, second: 1, at: 6) //will returns 8
+fib(first: 1, second: 1, at: 7) //will returns 13
+fib(first: 1, second: 1, at: 8) //will returns 21
+//Time complexity O(n)
 //Space complexity O(n)
 
 
@@ -38,7 +49,7 @@ primes(n: 20) //will return [2, 3, 5, 7, 11, 13, 17, 19]
 //3  filter an array from an array of two numbers, leaving only the members of the first array left in the second array, without using existing functions such as map, filter, contain, etc
 //For example: a = [1,2,3,4,5,6] , b = [2,4,6] Write code to remove numbers in a that do not exist in b, without using .map .filter .contain, etc.
 //This is a generic function. It can filter array of any types as long as the element conforms Equatable protocal
-func filter<T: Equatable>(a: inout [T], with b: inout [T]) {
+func filter<T: Equatable>(a: inout [T], against b: inout [T]) {
     for x in a {
         var notFoundXInB = true
         for y in b {
@@ -55,11 +66,11 @@ func filter<T: Equatable>(a: inout [T], with b: inout [T]) {
 
 var a = [1,2,3,4,5,6]
 var b = [2,4,6]
-filter(a: &a, with: &b)
+filter(a: &a, against: &b)
 print(a) //a will become [2, 4, 6]
 var c = [2,6,1,5,2,3,4,5,6,7,9,11]
 var d = [2,4,6]
-filter(a: &c, with: &d)
+filter(a: &c, against: &d)
 print(c) //c will become [2, 6, 2, 4, 6]
 //Time complexity O(n^2)
 //Space complexity O(n)
