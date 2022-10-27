@@ -71,7 +71,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTimer), name: UIScene.willDeactivateNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(resumeTimer), name: UIScene.didActivateNotification, object: nil)
-        
+        // break the strong referece cycle between ViewController and the closure by declaring self as unowned reference in the capture list. Unlike a weak reference, an unowned reference is expected to always have a value. In this context, the ViewController is expected to have a longer life than a single network request.
         request {[unowned self] result in
             DispatchQueue.main.async {[unowned self] in
                 activityIndicatorView.stopAnimating()
@@ -153,7 +153,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         if countdownTimer != nil, updatedRate != nil {
             pauseTimer()
         }
-        
+        // This is to demostrate how to use weak reference to break strong reference cycle. Weak reference may become nil at some point in the future, so weak references are always of optional value. In terms of ARC ownership model, an unowned optional reference and a weak reference can both be used in the same context.
         let task = urlSession.dataTask(with: url) { [weak self] (data, response, error) in
             guard error == nil else {
                 completion(.failure(error!))
@@ -317,6 +317,7 @@ extension ViewController: UITextFieldDelegate {
         }
     }
     
+    // make sure the input text is always of the corret dicimal format by evaluating it with regulare expresion. "000...67.0.3" "002.7.0.3" are not valid decimal numbers.
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var text = textField.text ?? ""
         if string.isEmpty {
