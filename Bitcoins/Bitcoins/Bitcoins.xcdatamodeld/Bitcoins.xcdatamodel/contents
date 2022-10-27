@@ -4,7 +4,7 @@
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="currencyDescription" optional="YES" attributeType="String"/>
         <attribute name="rate" optional="YES" attributeType="String"/>
-        <attribute name="rate_float" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rate_float" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <relationship name="minute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Minute" inverseName="eur" inverseEntity="Minute"/>
     </entity>
@@ -12,7 +12,7 @@
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="currencyDescription" optional="YES" attributeType="String"/>
         <attribute name="rate" optional="YES" attributeType="String"/>
-        <attribute name="rate_float" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rate_float" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <relationship name="minute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Minute" inverseName="gbp" inverseEntity="Minute"/>
     </entity>
@@ -27,7 +27,7 @@
         <attribute name="code" optional="YES" attributeType="String"/>
         <attribute name="currencyDescription" optional="YES" attributeType="String"/>
         <attribute name="rate" optional="YES" attributeType="String"/>
-        <attribute name="rate_float" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="rate_float" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="symbol" optional="YES" attributeType="String"/>
         <relationship name="minute" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Minute" inverseName="usd" inverseEntity="Minute"/>
     </entity>

@@ -189,7 +189,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         usdCurrency.rate = usdDict?["rate"] as! String?
         usdCurrency.currencyDescription = usdDict?["description"] as! String?
         let usdRateNumber = usdDict?["rate_float"] as! NSNumber
-        usdCurrency.rate_float = usdRateNumber.floatValue
+        usdCurrency.rate_float = usdRateNumber.doubleValue
         minute.usd = usdCurrency
         
         let gbpDict = bpi["GBP"];
@@ -199,7 +199,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         gbpCurrency.rate = gbpDict?["rate"] as! String?
         gbpCurrency.currencyDescription = gbpDict?["description"] as! String?
         let gbpRateNumber = gbpDict?["rate_float"] as! NSNumber
-        gbpCurrency.rate_float = gbpRateNumber.floatValue
+        gbpCurrency.rate_float = gbpRateNumber.doubleValue
         minute.gbp = gbpCurrency
         
         let eurDict = bpi["EUR"];
@@ -209,15 +209,15 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         eurCurrency.rate = eurDict?["rate"] as! String?
         eurCurrency.currencyDescription = eurDict?["description"] as! String?
         let eurRateNumber = eurDict?["rate_float"] as! NSNumber
-        eurCurrency.rate_float = eurRateNumber.floatValue
+        eurCurrency.rate_float = eurRateNumber.doubleValue
         minute.eur = eurCurrency
         
         return minute
     }
     
     func refreshCalculateResultLabel() {
-        if let text = calculateExchangeTextField.text, let btc = Float(text), let rates = updatedRate {
-            var exchangeRate = Float()
+        if let text = calculateExchangeTextField.text, let btc = Double(text), let rates = updatedRate {
+            var exchangeRate = Double()
             switch currencyType2Calculate {
             case .usd:
                 if let rate = rates.usd?.rate_float {
@@ -232,7 +232,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
                     exchangeRate = rate
                 }
             }
-            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(btc*exchangeRate)
+            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
         } else {
             self.calculateExchangeLabel.text = ""
         }
@@ -295,8 +295,8 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.window?.removeGestureRecognizer(resignFirstResponderGesture)
-        if let text = textField.text, let btc = Float(text), let rates = updatedRate {
-            var exchangeRate = Float()
+        if let text = textField.text, let btc = Double(text), let rates = updatedRate {
+            var exchangeRate = Double()
             switch currencyType2Calculate {
             case .usd:
                 if let rate = rates.usd?.rate_float {
@@ -311,7 +311,7 @@ extension ViewController: UITextFieldDelegate {
                     exchangeRate = rate
                 }
             }
-            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(btc*exchangeRate)
+            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
         } else {
             self.calculateExchangeLabel.text = ""
         }
