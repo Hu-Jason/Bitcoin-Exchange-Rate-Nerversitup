@@ -41,6 +41,7 @@ func primes(n: Int) -> [Int] {
     return numbers.filter{ $0 > 0 }
 }
 
+primes(n: 8) //will return [2, 3, 5, 7]
 primes(n: 20) //will return [2, 3, 5, 7, 11, 13, 17, 19]
 //Time complexity O(n^2)
 //Space complexity O(n)
