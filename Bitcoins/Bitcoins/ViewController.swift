@@ -232,15 +232,15 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
                     exchangeRate = rate
                 }
             }
-            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
+            calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
         } else {
-            self.calculateExchangeLabel.text = ""
+            calculateExchangeLabel.text = "   "
         }
     }
     
     @objc func tapRecognized(gesture: UITapGestureRecognizer) {
-        if self.calculateExchangeTextField.isFirstResponder && gesture.state == .ended {
-            self.calculateExchangeTextField.resignFirstResponder()
+        if calculateExchangeTextField.isFirstResponder && gesture.state == .ended {
+            calculateExchangeTextField.resignFirstResponder()
         }
     }
     //MARK: UIGestureRecognizerDelegate
@@ -250,7 +250,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     /** To not detect touch events in a subclass of UIControl, these may have added their own selector for specific work */
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        if let touchedView = touch.view, (touchedView.isKind(of: UIControl.self) || touchedView.isKind(of: UINavigationBar.self)) {
+        if let touchedView = touch.view, (touchedView is UIControl || touchedView is UINavigationBar) {
             return false
         }
         return true
@@ -311,9 +311,9 @@ extension ViewController: UITextFieldDelegate {
                     exchangeRate = rate
                 }
             }
-            self.calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
+            calculateExchangeLabel.text = currencyType2Calculate.rawValue + " " + String(format: "%.2f", btc*exchangeRate)
         } else {
-            self.calculateExchangeLabel.text = ""
+            calculateExchangeLabel.text = "   "
         }
     }
     
