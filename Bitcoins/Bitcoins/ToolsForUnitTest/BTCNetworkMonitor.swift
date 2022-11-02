@@ -6,7 +6,7 @@
 //
 
 import Network
-
+// This class provide a shared instance to monitor the internet connection status. It is used in Unit Tests to skip the test if there is no network connection.
 class BTCNetworkMonitor {
     static let shared = BTCNetworkMonitor()
     var isReachable: Bool { status == .satisfied }

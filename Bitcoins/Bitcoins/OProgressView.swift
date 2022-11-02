@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// This is the UIView subclass for countdown in the home page
 class OProgressView: UIView {
     var progressLayer = CAShapeLayer()
     var grayProgressLayer = CAShapeLayer()

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// This file is to test the data requested from API with fake JSON data. These types defined in this file will only be used in Unit Test.
 protocol BTCURLSessionMockProtocol {
     func dataTask(
         with url: URL,

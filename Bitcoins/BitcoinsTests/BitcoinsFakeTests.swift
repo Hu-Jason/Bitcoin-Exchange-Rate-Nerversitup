@@ -26,6 +26,7 @@ final class BitcoinsFakeTests: XCTestCase {
         try super.tearDownWithError()
     }
 
+    //Test if the data requested from API can be parsed correctly into currency model
     func testDataFromApiRequest() throws {
         try XCTSkipUnless(sut != nil, "The home page ViewController is nil")
         try XCTSkipUnless(networkMonitor.isReachable, "Network connectivity needed for this test.")

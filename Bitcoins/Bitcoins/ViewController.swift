@@ -172,8 +172,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         task.resume()
     }
     
+    //parse data from API into model
     func exchangeRateFromJson(fromData data: Data) -> Minute? {
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return nil }
         guard let time = json["time"] as? Dictionary<String, String>, let bpi = json["bpi"] as? Dictionary<String,Dictionary<String, Any>>, let managedContext = persistentContainer?.viewContext else { return nil }
         
         let minute = Minute(context: managedContext)

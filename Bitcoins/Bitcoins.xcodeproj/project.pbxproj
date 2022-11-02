@@ -96,6 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234279EC2912364500947F41 /* PresentTransition */ = {
+			isa = PBXGroup;
+			children = (
+				234AB50A290394200071EFCB /* BTCPresentationController.swift */,
+				235F44802903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift */,
+			);
+			path = PresentTransition;
+			sourceTree = "<group>";
+		};
+		234279EE29123C2B00947F41 /* ToolsForUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				236851BD2905795100D70148 /* BTCURLSessionMockTest.swift */,
+				236851BF29058AEE00D70148 /* BTCNetworkMonitor.swift */,
+			);
+			path = ToolsForUnitTest;
+			sourceTree = "<group>";
+		};
 		238F37B329005CB900AFC008 = {
 			isa = PBXGroup;
 			children = (
@@ -119,17 +137,15 @@
 		238F37BE29005CB900AFC008 /* Bitcoins */ = {
 			isa = PBXGroup;
 			children = (
+				234279EE29123C2B00947F41 /* ToolsForUnitTest */,
+				234279EC2912364500947F41 /* PresentTransition */,
 				238F37BF29005CB900AFC008 /* AppDelegate.swift */,
 				238F37C129005CB900AFC008 /* SceneDelegate.swift */,
-				2350905D29026BEC00D809A2 /* OProgressView.swift */,
-				235090862902D1BB00D809A2 /* HistoryRateTableViewCell.swift */,
 				238F37C329005CB900AFC008 /* ViewController.swift */,
-				236851BD2905795100D70148 /* BTCURLSessionMockTest.swift */,
-				236851BF29058AEE00D70148 /* BTCNetworkMonitor.swift */,
+				2350905D29026BEC00D809A2 /* OProgressView.swift */,
 				235090882902D57300D809A2 /* RateHistoryTableViewController.swift */,
+				235090862902D1BB00D809A2 /* HistoryRateTableViewCell.swift */,
 				235F44822903C1E300A9A5F2 /* BTCRecordSortViewController.swift */,
-				234AB50A290394200071EFCB /* BTCPresentationController.swift */,
-				235F44802903BBB400A9A5F2 /* BTCPopDismissAnimationController.swift */,
 				238F37C529005CB900AFC008 /* Main.storyboard */,
 				238F37CB29005CBA00AFC008 /* Assets.xcassets */,
 				238F37CD29005CBA00AFC008 /* LaunchScreen.storyboard */,
