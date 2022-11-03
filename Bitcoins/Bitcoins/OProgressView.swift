@@ -6,39 +6,41 @@
 //
 
 import UIKit
-// This is the UIView subclass for countdown in the home page
+// This is a UIView subclass for the circle countdown progress view in the home page
 class OProgressView: UIView {
-    var progressLayer = CAShapeLayer()
-    var grayProgressLayer = CAShapeLayer()
+    let progressLayer = CAShapeLayer()
+    let grayProgressLayer = CAShapeLayer()
     let digitLabel = UILabel()
-    override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-        if superview != nil {
-            digitLabel.frame = bounds
-            digitLabel.textColor = UIColor.systemMint
-            digitLabel.font = UIFont(name: "DIN Alternate", size: 36.0) ?? .systemFont(ofSize: 36.0)
-            digitLabel.textAlignment = .center
-            addSubview(digitLabel)
-            
-            grayProgressLayer.frame = bounds
-            grayProgressLayer.fillColor = UIColor.clear.cgColor
-            grayProgressLayer.strokeColor = UIColor.lightGray.cgColor
-            grayProgressLayer.opacity = 1.0
-            grayProgressLayer.lineCap = .round
-            grayProgressLayer.lineWidth = 10.0
-            layer.addSublayer(grayProgressLayer)
-            
-            progressLayer.frame = bounds
-            progressLayer.fillColor = UIColor.clear.cgColor
-            progressLayer.strokeColor = UIColor.systemMint.cgColor
-            progressLayer.opacity = 1.0
-            progressLayer.lineCap = .round
-            progressLayer.lineWidth = 10.0
-            layer.addSublayer(progressLayer)
-            
-            drawProgressCircle(with: -(Double.pi / 2) + Double.pi * 2.0, isGrayCircle: true)
-        }
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        digitLabel.frame = bounds
+        digitLabel.textColor = UIColor.systemMint
+        digitLabel.font = UIFont(name: "DIN Alternate", size: 36.0) ?? .systemFont(ofSize: 36.0)
+        digitLabel.textAlignment = .center
+        addSubview(digitLabel)
+
+        grayProgressLayer.frame = bounds
+        grayProgressLayer.fillColor = UIColor.clear.cgColor
+        grayProgressLayer.strokeColor = UIColor.lightGray.cgColor
+        grayProgressLayer.opacity = 1.0
+        grayProgressLayer.lineCap = .round
+        grayProgressLayer.lineWidth = 10.0
+        layer.addSublayer(grayProgressLayer)
+
+        progressLayer.frame = bounds
+        progressLayer.fillColor = UIColor.clear.cgColor
+        progressLayer.strokeColor = UIColor.systemMint.cgColor
+        progressLayer.opacity = 1.0
+        progressLayer.lineCap = .round
+        progressLayer.lineWidth = 10.0
+        layer.addSublayer(progressLayer)
+
+        drawProgressCircle(with: -(Double.pi / 2) + Double.pi * 2.0, isGrayCircle: true)
     }
+    
     
     func drawCountDownProgress(seconds: Int) {
         let progress = Double(seconds) / 60.0

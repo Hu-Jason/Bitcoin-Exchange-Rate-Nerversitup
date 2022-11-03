@@ -71,13 +71,19 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(pauseTimer), name: UIScene.willDeactivateNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(resumeTimer), name: UIScene.didActivateNotification, object: nil)
+        
+        fetchInitialCurrencyRates()
+    }
+
+    func fetchInitialCurrencyRates() {
         // break the strong referece cycle between ViewController and the closure by declaring self as unowned reference in the capture list. Unlike a weak reference, an unowned reference is expected to always have a value. In this context, the ViewController is expected to have a longer life than a single network request.
         request {[unowned self] result in
             DispatchQueue.main.async {[unowned self] in
                 activityIndicatorView.stopAnimating()
-            }
-            if case .success(let success) = result {
-                updatedRate = success
+            } // UI refresh should take place in main thread
+            switch result {
+            case .success(let minute):
+                updatedRate = minute
                 if let rateNewest = updatedRate {
                     appDelegate?.saveContext()
                     if let rateTime = rateNewest.time {
@@ -91,12 +97,23 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
                         }
                     }
                 }
+            case .failure(let error):
+                DispatchQueue.main.async {[unowned self] in
+                    popUpErrorNotice(error)
+                }
             }
         }
     }
-
-    func startTimer() {
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshProgress), userInfo: nil, repeats: true)
+    
+    func popUpErrorNotice(_ error: Error) {
+        let alert = UIAlertController(title: error.localizedDescription, message: "Try to request API again?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "YES", style: .default) { [unowned self] _ in //define an unowned self in capture list to break strong reference cycle. The reason to use "unowned" rather than "weak" is that self is expected to have a longer life time, and it won't be nil when the alert is on screen.
+            fetchInitialCurrencyRates()
+        }
+        let noAction = UIAlertAction(title: "NO", style: .cancel)
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        present(alert, animated: true)
     }
     
     @objc func refreshProgress() {
@@ -107,8 +124,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
                 DispatchQueue.main.async {[unowned self] in
                     activityIndicatorView.stopAnimating()
                 }
-                if case .success(let success) = result {
-                    updatedRate = success
+                if case .success(let minute) = result {
+                    updatedRate = minute
                     if let rateNewest = updatedRate {
                         appDelegate?.saveContext()
                         if let rateTime = rateNewest.time {
@@ -129,11 +146,16 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         }
     }
     
+    //MARK: refresh currency rates data every 1 minute with a timer. Countdown the time to refresh with a custom progress view
+    func startTimer() {
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshProgress), userInfo: nil, repeats: true)
+    }
+    // pause the timer when app resigns active
     @objc func pauseTimer() {
-        countdownTimer?.fireDate = Date.distantFuture // pause the timer
+        countdownTimer?.fireDate = Date.distantFuture
         timeIsPaused = true
     }
-    
+    // resume the timer when app becomes active
     @objc func resumeTimer() {
         if timeIsPaused {
             countdownTimer?.fireDate = Date(timeIntervalSinceNow: 1.0)
