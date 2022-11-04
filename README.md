@@ -3,7 +3,7 @@ An application to display BTC’s currency as these 3 rates (USD, GBP and EUR)
 
 
 This is an application for Neversitup Co., Ltd's Mobile Developer Testing with the following features: 
-(There is an folder named "Additional Algorithm Tests" in this repository. Please find solutions for additional tests in a swift file in this folder. I did not put it in the app project folder for fear that it will cause my demo app looks cumbersome.)
+(There is a folder named "Additional Algorithm Tests" in this repository. Please find solutions for additional tests in a swift file in this folder. I did not put it in the app project folder for fear that it will cause my demo app looks cumbersome.)
 
 1. Displaying of BTC’s currency as this 3 rate (USD, GBP and EUR) from API
 2. Currency rate must have to auto update every 1 minute 

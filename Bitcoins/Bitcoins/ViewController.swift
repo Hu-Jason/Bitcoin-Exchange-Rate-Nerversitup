@@ -149,6 +149,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     //MARK: refresh currency rates data every 1 minute with a timer. Countdown the time to refresh with a custom progress view
     func startTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshProgress), userInfo: nil, repeats: true)
+        countdownTimer?.tolerance = 0.5 //As the user of the timer, you can determine the appropriate tolerance for a timer. A general rule, set the tolerance to at least 10% of the interval, for a repeating timer. Even a small amount of tolerance has significant positive impact on the power usage of your application.
     }
     // pause the timer when app resigns active
     @objc func pauseTimer() {

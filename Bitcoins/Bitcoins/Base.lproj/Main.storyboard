@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VBX-Xj-L2Z">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VBX-Xj-L2Z">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController storyboardIdentifier="BitcoinHome" title="Bitcoin" id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="LzE-5F-bMR">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leG-k0-Lep">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="0.0" width="335" height="55"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundRectangleBg" translatesAutoresizingMaskIntoConstraints="NO" id="2VU-hK-yoP">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-KI-D6T">
                                                 <rect key="frame" x="16" y="18.5" width="28" height="18"/>
@@ -34,7 +34,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-gq-59W">
-                                                <rect key="frame" x="52.5" y="27.5" width="305.5" height="0.0"/>
+                                                <rect key="frame" x="52.5" y="27.5" width="266.5" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-Sk-rza">
-                                        <rect key="frame" x="20" y="63" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="63" width="335" height="55"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundRectangleBg" translatesAutoresizingMaskIntoConstraints="NO" id="xlJ-yg-UKb">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-rd-MUb">
                                                 <rect key="frame" x="16" y="18.5" width="27.5" height="18"/>
@@ -67,7 +67,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihJ-tB-IYX">
-                                                <rect key="frame" x="52" y="27.5" width="306" height="0.0"/>
+                                                <rect key="frame" x="52" y="27.5" width="267" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -88,10 +88,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfi-Kv-wwO">
-                                        <rect key="frame" x="20" y="126" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="126" width="335" height="55"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roundRectangleBg" translatesAutoresizingMaskIntoConstraints="NO" id="BJy-Mc-s1x">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXj-uM-91b">
                                                 <rect key="frame" x="16" y="18.5" width="27" height="18"/>
@@ -100,7 +100,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-RC-fvf">
-                                                <rect key="frame" x="51.5" y="27.5" width="306.5" height="0.0"/>
+                                                <rect key="frame" x="51.5" y="27.5" width="267.5" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-Y9-CqQ">
-                                        <rect key="frame" x="20" y="189" width="374" height="178"/>
+                                        <rect key="frame" x="20" y="189" width="335" height="178"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-hj-wJy">
                                                 <rect key="frame" x="0.0" y="89" width="138" height="81"/>
@@ -152,13 +152,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="   " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg7-9k-XIE">
-                                                <rect key="frame" x="146" y="119.5" width="220" height="20"/>
+                                                <rect key="frame" x="146" y="119.5" width="181" height="20"/>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRu-AI-RB3">
-                                                <rect key="frame" x="149" y="147.5" width="217" height="0.5"/>
+                                                <rect key="frame" x="149" y="147.5" width="178" height="0.5"/>
                                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="IPb-HW-TSK"/>
@@ -171,8 +171,8 @@
                                                     <constraint firstAttribute="width" constant="15" id="heg-IP-Z46"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input bitcoin amount and select a currency blow" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rlN-wm-f4m">
-                                                <rect key="frame" x="0.0" y="8" width="374" height="44"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input bitcoin amount and select a currency below" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rlN-wm-f4m">
+                                                <rect key="frame" x="0.0" y="8" width="335" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="l9n-gj-PUC"/>
                                                 </constraints>
@@ -202,10 +202,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-l0-sBX">
-                                        <rect key="frame" x="20" y="375" width="374" height="211"/>
+                                        <rect key="frame" x="20" y="375" width="335" height="211"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWS-tT-lYu" customClass="OProgressView" customModule="Bitcoins" customModuleProvider="target">
-                                                <rect key="frame" x="137" y="55.5" width="100" height="100"/>
+                                                <rect key="frame" x="117.5" y="55.5" width="100" height="100"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="bSk-nU-Dxi"/>
@@ -213,7 +213,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-j0-d1r">
-                                                <rect key="frame" x="20" y="104" width="109" height="51.5"/>
+                                                <rect key="frame" x="20" y="78.5" width="89.5" height="77"/>
                                                 <string key="text">Update
 rates after</string>
                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
@@ -257,7 +257,7 @@ rates after</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Ikc-uQ-zSM"/>
                             </scrollView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="34C-hh-m35">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" name="AccentColor"/>
                             </activityIndicatorView>
                         </subviews>
@@ -275,7 +275,7 @@ rates after</string>
                     <navigationItem key="navigationItem" id="zAU-WX-t1A">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="XdC-e8-wvw">
-                            <rect key="frame" x="79" y="0.0" width="255" height="44"/>
+                            <rect key="frame" x="60" y="0.0" width="255" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVt-yf-W7q">
@@ -344,19 +344,19 @@ rates after</string>
             <objects>
                 <tableViewController title="Rate History" id="UsR-ZZ-xqo" customClass="RateHistoryTableViewController" customModule="Bitcoins" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WaO-1j-qmI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyRateCell" id="fRj-a3-M5Z" customClass="HistoryRateTableViewCell" customModule="Bitcoins" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="105"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fRj-a3-M5Z" id="v45-Ss-Oau">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022 Oct. 21 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPa-Hr-Gdb">
-                                            <rect key="frame" x="20" y="11" width="374" height="17"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="lkR-Ss-5l3"/>
                                             </constraints>
@@ -365,22 +365,22 @@ rates after</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwX-bX-O2L">
-                                            <rect key="frame" x="20" y="36" width="374" height="58"/>
+                                            <rect key="frame" x="16" y="36" width="343" height="58"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="coT-Cx-Djd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="58"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko5-GL-6HJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="119.5" height="58"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="109" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTS-Cd-iIw">
-                                                                    <rect key="frame" x="3" y="8" width="113.5" height="17.5"/>
+                                                                    <rect key="frame" x="3" y="8" width="103" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="$ 123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3e-Hc-HHw">
-                                                                    <rect key="frame" x="3" y="33.5" width="113.5" height="16.5"/>
+                                                                    <rect key="frame" x="3" y="33.5" width="103" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -403,16 +403,16 @@ rates after</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYh-uu-Zkw">
-                                                            <rect key="frame" x="127.5" y="0.0" width="119" height="58"/>
+                                                            <rect key="frame" x="117" y="0.0" width="109" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="754" text="GBP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-ns-wdL">
-                                                                    <rect key="frame" x="3" y="8" width="113" height="17.5"/>
+                                                                    <rect key="frame" x="3" y="8" width="103" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$ 123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOI-Yu-NVe">
-                                                                    <rect key="frame" x="3" y="33.5" width="113" height="16.5"/>
+                                                                    <rect key="frame" x="3" y="33.5" width="103" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -435,16 +435,16 @@ rates after</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-Xe-GxE">
-                                                            <rect key="frame" x="254.5" y="0.0" width="119.5" height="58"/>
+                                                            <rect key="frame" x="234" y="0.0" width="109" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="754" text="EUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-az-Ivz">
-                                                                    <rect key="frame" x="3" y="8" width="113.5" height="17.5"/>
+                                                                    <rect key="frame" x="3" y="8" width="103" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$ 123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-C1-khV">
-                                                                    <rect key="frame" x="3" y="33.5" width="113.5" height="16.5"/>
+                                                                    <rect key="frame" x="3" y="33.5" width="103" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -520,19 +520,19 @@ rates after</string>
             <objects>
                 <viewController id="F3s-0z-MgS" customClass="BTCRecordSortViewController" customModule="Bitcoins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MGN-fI-t96">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVx-tf-2dx">
-                                <rect key="frame" x="0.0" y="358" width="414" height="480"/>
+                                <rect key="frame" x="0.0" y="310" width="375" height="337"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popBottomBg" translatesAutoresizingMaskIntoConstraints="NO" id="oQG-ZY-oHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="337"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqv-Iy-QlK">
-                                        <rect key="frame" x="177" y="8" width="60" height="4"/>
+                                        <rect key="frame" x="157.5" y="8" width="60" height="4"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="pbM-Lu-ocB"/>
@@ -545,7 +545,7 @@ rates after</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ac-hl-hPs">
-                                        <rect key="frame" x="0.0" y="15" width="414" height="465"/>
+                                        <rect key="frame" x="0.0" y="15" width="375" height="322"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -570,7 +570,7 @@ rates after</string>
                                 </constraints>
                             </view>
                             <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRv-sG-8d4">
-                                <rect key="frame" x="0.0" y="48" width="414" height="310"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -579,13 +579,13 @@ rates after</string>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-mE-Gmn">
-                                <rect key="frame" x="0.0" y="358" width="414" height="480"/>
+                                <rect key="frame" x="0.0" y="310" width="375" height="337"/>
                                 <subviews>
                                     <view clipsSubviews="YES" tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0T-Vh-poh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiR-sK-0q1">
-                                                <rect key="frame" x="63.5" y="175.5" width="287" height="81"/>
+                                                <rect key="frame" x="44" y="111" width="287" height="81"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rf9-cs-bRq">
                                                         <rect key="frame" x="34.5" y="0.0" width="133" height="81"/>
@@ -685,7 +685,7 @@ rates after</string>
                                         </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVY-eG-311">
-                                        <rect key="frame" x="161" y="20" width="92" height="20"/>
+                                        <rect key="frame" x="141.5" y="20" width="92" height="20"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -702,10 +702,10 @@ rates after</string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="ZzV-LO-2Da">
-                                <rect key="frame" x="55" y="769" width="304" height="44"/>
+                                <rect key="frame" x="55" y="578" width="265" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-LL-GWD">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="44"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Cancel" backgroundImage="popNo">
@@ -716,7 +716,7 @@ rates after</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-Ls-GKT">
-                                        <rect key="frame" x="181" y="0.0" width="123" height="44"/>
+                                        <rect key="frame" x="161.5" y="0.0" width="103.5" height="44"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Sort" backgroundImage="popYes">
@@ -782,7 +782,7 @@ rates after</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VBX-Xj-L2Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YXq-Qu-Vm9">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
