@@ -51,7 +51,9 @@ primes(n: 20) //will return [2, 3, 5, 7, 11, 13, 17, 19]
 //For example: a = [1,2,3,4,5,6] , b = [2,4,6] Write code to remove numbers in a that do not exist in b, without using .map .filter .contain, etc.
 //This is a generic function. It can filter array of any types as long as the element conforms Equatable protocal
 func filter<T: Equatable>(a: inout [T], against b: inout [T]) {
-    for x in a {
+    var indices2Remove: [Int] = []
+    for indexA in 0..<a.count {
+        let x = a[indexA]
         var notFoundXInB = true
         for y in b {
             if x == y {
@@ -60,8 +62,12 @@ func filter<T: Equatable>(a: inout [T], against b: inout [T]) {
             }
         }
         if notFoundXInB {
-            a.removeAll { $0 == x }
+            indices2Remove.append(indexA)
         }
+    }
+    
+    for i in stride(from: indices2Remove.count-1, through: 0, by: -1) {
+        a.remove(at: indices2Remove[i])
     }
 }
 
@@ -73,5 +79,9 @@ var c = [2,6,1,5,2,3,4,5,6,7,9,11]
 var d = [2,4,6]
 filter(a: &c, against: &d)
 print(c) //c will become [2, 6, 2, 4, 6]
+var e = [7,3,99,2,2,9,2,2,2]
+var f = [2]
+filter(a: &e, against: &f)
+print(e) //e will become [2, 2, 2, 2, 2]
 //Time complexity O(n^2)
 //Space complexity O(n)
