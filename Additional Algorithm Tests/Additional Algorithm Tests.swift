@@ -43,7 +43,7 @@ func primes(n: Int) -> [Int] {
 
 primes(n: 8) //will return [2, 3, 5, 7]
 primes(n: 20) //will return [2, 3, 5, 7, 11, 13, 17, 19]
-//Time complexity O(n!)
+//Time complexity O(nlogn)
 //Space complexity O(n)
 
 
